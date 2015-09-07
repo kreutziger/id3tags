@@ -13,11 +13,11 @@ while (option = process.argv.shift()) {
         case '-A':
             options.album = process.argv.shift();
             break;
+        case '-f':
+            options.file = process.argv.shift();
+            break;
         case '-g':
             options.genre = process.argv.shift();
-            break;
-        case '-n':
-            options.name = process.argv.shift();
             break;
         case '-s':
             options.songs = process.argv.shift();
@@ -40,7 +40,7 @@ if (!options.file) {
     options.file = 'bands';
 }
 
-var content = '';
+var content = '#artist -a;album -A;song -t;genre -g;year -y;track -T\n';
 
 for (i = 0; i < options.songs; i++) {
     content += [options.artist, options.album, ' ', options.genre, options.year,
