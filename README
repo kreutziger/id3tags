@@ -1,0 +1,4 @@
+# needs id3v2 binary
+node bands.js -a <Artist> -A <Album> -g <Genre Number - id3v2 -L> -s <Song count> -y <Year> -f <outputfilename - default bands>
+# fill in the song names into generated file
+node tags.js -d <Directory with sorted music files> -f <file with tagging information> (-n for dry run)
